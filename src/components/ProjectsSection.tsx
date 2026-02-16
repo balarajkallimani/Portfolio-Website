@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Github } from "lucide-react";
+import projectsBg from "@/assets/projects-bg.jpg";
 
 const projects = [
   {
@@ -42,8 +43,12 @@ const ProjectsSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" className="section-padding" ref={ref}>
-      <div className="container mx-auto max-w-5xl">
+    <section id="projects" className="section-padding relative overflow-hidden" ref={ref}>
+      <div className="absolute inset-0 z-0">
+        <img src={projectsBg} alt="" className="w-full h-full object-cover opacity-15" />
+        <div className="absolute inset-0 bg-background/80" />
+      </div>
+      <div className="relative z-10 container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

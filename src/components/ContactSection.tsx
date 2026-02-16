@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Mail, Linkedin, Github, Send } from "lucide-react";
+import contactBg from "@/assets/contact-bg.jpg";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -35,8 +36,12 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding" ref={ref}>
-      <div className="container mx-auto max-w-4xl">
+    <section id="contact" className="section-padding relative overflow-hidden" ref={ref}>
+      <div className="absolute inset-0 z-0">
+        <img src={contactBg} alt="" className="w-full h-full object-cover opacity-15" />
+        <div className="absolute inset-0 bg-background/80" />
+      </div>
+      <div className="relative z-10 container mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

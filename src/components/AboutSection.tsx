@@ -2,14 +2,19 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Download, Sparkles } from "lucide-react";
+import aboutBg from "@/assets/about-bg.jpg";
 
 const AboutSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="section-padding" ref={ref}>
-      <div className="container mx-auto max-w-4xl">
+    <section id="about" className="section-padding relative overflow-hidden" ref={ref}>
+      <div className="absolute inset-0 z-0">
+        <img src={aboutBg} alt="" className="w-full h-full object-cover opacity-15" />
+        <div className="absolute inset-0 bg-background/80" />
+      </div>
+      <div className="relative z-10 container mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
