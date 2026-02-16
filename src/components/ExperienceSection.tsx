@@ -12,17 +12,17 @@ const timeline = [
   },
   {
     icon: Briefcase,
-    title: "Web Development Intern",
-    org: "Self / Freelance Projects",
-    period: "2024 – Present",
-    description: "Building real-world web applications using React, Tailwind, and integrating AI capabilities for smarter user experiences.",
+    title: "Artificial Intelligence Intern",
+    org: "AI & Web Technologies",
+    period: "2026 – Present",
+    description: "Working on AI-powered solutions, integrating generative AI capabilities into web applications and building intelligent systems.",
   },
   {
     icon: Award,
     title: "Certifications",
     org: "Online Platforms",
     period: "2023 – 2025",
-    description: "Completed certifications in Web Development, Python Programming, and AI fundamentals from leading online platforms.",
+    description: "Prompt Engineering (2025), Cloud Computing, UI/UX Design — certified from leading online platforms.",
   },
 ];
 
