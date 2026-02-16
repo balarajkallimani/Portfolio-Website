@@ -40,7 +40,6 @@ const categories = [
       { name: "Git / GitHub", level: 80 },
       { name: "VS Code", level: 90 },
       { name: "Figma", level: 65 },
-      { name: "Vite", level: 75 },
     ],
   },
 ];

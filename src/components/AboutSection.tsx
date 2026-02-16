@@ -41,8 +41,8 @@ const AboutSection = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 mb-8">
             {[
-              { label: "Projects", value: "10+" },
-              { label: "Technologies", value: "15+" },
+              { label: "Projects", value: "5+" },
+              { label: "Technologies", value: "10+" },
               { label: "Focus", value: "AI + Web" },
               { label: "Status", value: "Open to work" },
             ].map((stat) => (
@@ -58,7 +58,8 @@ const AboutSection = () => {
 
           <div className="text-center">
             <a
-              href="#"
+              href="/resume/1rn23cs401_balarajkallimani.pdf"
+              download
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary/50 text-primary font-medium hover:bg-primary/10 transition-all duration-300"
             >
               <Download size={16} /> Download Resume
