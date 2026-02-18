@@ -1,7 +1,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, Linkedin, Github, Send } from "lucide-react";
+import { Mail, Linkedin, Github, Send, Loader2 } from "lucide-react";
 import contactBg from "@/assets/contact-bg.jpg";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -9,6 +10,7 @@ const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const validate = () => {
     const errs: Record<string, string> = {};
@@ -19,13 +21,20 @@ const ContactSection = () => {
     return errs;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const errs = validate();
     setErrors(errs);
     if (Object.keys(errs).length === 0) {
-      setSubmitted(true);
-      setForm({ name: "", email: "", message: "" });
+      setLoading(true);
+      const { error } = await supabase
+        .from("contact_messages")
+        .insert({ name: form.name, email: form.email, message: form.message });
+      setLoading(false);
+      if (!error) {
+        setSubmitted(true);
+        setForm({ name: "", email: "", message: "" });
+      }
     }
   };
 
@@ -146,9 +155,10 @@ const ContactSection = () => {
 
             <button
               type="submit"
-              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium btn-glow transition-all duration-300 hover:brightness-110"
+              disabled={loading}
+              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium btn-glow transition-all duration-300 hover:brightness-110 disabled:opacity-50"
             >
-              Send Message <Send size={16} />
+              {loading ? <><Loader2 size={16} className="animate-spin" /> Sending...</> : <>Send Message <Send size={16} /></>}
             </button>
           </motion.form>
         </div>
