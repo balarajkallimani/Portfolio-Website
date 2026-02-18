@@ -39,9 +39,9 @@ const ContactSection = () => {
   };
 
   const socials = [
-    { icon: Mail, label: "Email", href: "mailto:balaraj@example.com" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-    { icon: Github, label: "GitHub", href: "https://github.com" },
+    { icon: Mail, label: "balarajvk21@gmail.com", href: "mailto:balarajvk21@gmail.com" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/balarajkallimani/" },
+    { icon: Github, label: "GitHub", href: "https://github.com/balarajkallimani" },
   ];
 
   return (
