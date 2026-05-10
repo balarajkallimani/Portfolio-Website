@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Award, ExternalLink, Download } from "lucide-react";
+import { Award, ExternalLink } from "lucide-react";
 
 const certifications = [
   {
@@ -76,13 +76,6 @@ const CertificationsSection = () => {
                     className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md border border-primary/40 text-primary hover:bg-primary/10 transition-colors"
                   >
                     <ExternalLink size={12} /> View
-                  </a>
-                  <a
-                    href={cert.file}
-                    download
-                    className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md border border-border text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors"
-                  >
-                    <Download size={12} /> Download
                   </a>
                 </div>
               </div>
