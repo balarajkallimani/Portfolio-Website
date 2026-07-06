@@ -42,7 +42,7 @@ const projects = [
       "A real-time weather application that provides current weather conditions, multi-day forecasts, and location-based search using the MERN stack.",
     tech: ["MongoDB", "Express", "React", "Node.js", "OpenWeather API"],
     github: "#",
-    live: "#",
+    live: "https://weather-application-psi-wheat.vercel.app/",
   },
   {
     title: "Hospital Management System",
