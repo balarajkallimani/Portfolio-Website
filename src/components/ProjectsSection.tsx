@@ -50,7 +50,7 @@ const projects = [
       "A comprehensive hospital management platform with patient records, appointment scheduling, doctor allocation, and billing management using the MERN stack.",
     tech: ["MongoDB", "Express", "React", "Node.js", "JWT"],
     github: "#",
-    live: "#",
+    live: "https://hospital-management-system-taupe-psi.vercel.app/login/",
   },
 ];
 
