@@ -52,6 +52,7 @@ const projects = [
     github: "#",
     live: "#",
   },
+];
 
 const ProjectsSection = () => {
   const ref = useRef(null);
