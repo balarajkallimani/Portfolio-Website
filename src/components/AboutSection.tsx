@@ -37,9 +37,9 @@ const AboutSection = () => {
             <Sparkles className="text-primary mt-1 shrink-0" size={20} />
             <p className="text-secondary-foreground leading-relaxed">
               I'm a Computer Science Engineering student at RNS Institute of Technology
-              with a deep passion for building intelligent web applications. I specialize in
-              modern frontend frameworks, backend development, and integrating Generative AI
-              to create next-generation digital experiences. I love transforming complex problems
+              with a deep passion for building full stack web applications. I specialize in
+              modern frontend frameworks, backend development, and database management
+              to create scalable, user-friendly digital experiences. I love transforming complex problems
               into elegant, user-friendly solutions.
             </p>
           </div>
@@ -48,7 +48,7 @@ const AboutSection = () => {
             {[
               { label: "Projects", value: "5+" },
               { label: "Technologies", value: "10+" },
-              { label: "Focus", value: "AI + Web" },
+              { label: "Focus", value: "Full Stack" },
               { label: "Status", value: "Open to work" },
             ].map((stat) => (
               <div
