@@ -63,7 +63,7 @@ const AboutSection = () => {
 
           <div className="text-center">
             <a
-              href="/resume/1rn23cs401_balarajkallimani.pdf"
+              href="/resume/Balarajkallimani_resume_2.pdf"
               download
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary/50 text-primary font-medium hover:bg-primary/10 transition-all duration-300"
             >
